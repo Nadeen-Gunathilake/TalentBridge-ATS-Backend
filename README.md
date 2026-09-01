@@ -2,7 +2,7 @@
 
 A backend REST API for a single-company Applicant Tracking System — built to replace the scattered mess of job boards, inboxes, and spreadsheets that most hiring teams still run on. Candidates get one portal to browse roles and apply; recruiters get one dashboard to review, rate, and move applicants through a real hiring pipeline, with internal data that never leaks to the outside.
 
-**Production:**[View Live Website](https://talentbridge-ats.up.railway.app)
+**Production :** [View Live Website](https://talentbridge-ats.up.railway.app)
 
 ## Highlights
 
