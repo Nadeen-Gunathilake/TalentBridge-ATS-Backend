@@ -19,7 +19,7 @@ public class Job {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String description;
 
     @Column(nullable = false)
@@ -34,7 +34,7 @@ public class Job {
     @Column(nullable = false)
     private String salary_range;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String required_skills;
 
     @Column(nullable = false)
