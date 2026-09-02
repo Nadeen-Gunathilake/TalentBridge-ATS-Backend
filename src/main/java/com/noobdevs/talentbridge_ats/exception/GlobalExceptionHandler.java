@@ -40,7 +40,11 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<ApiErrorResponse> handleDataIntegrityViolation(DataIntegrityViolationException ex, WebRequest req) {
         log.error("Data integrity violation", ex);
-        return build(HttpStatus.CONFLICT, "A record with this value already exists", req);
+        String rootMsg = ex.getMostSpecificCause().getMessage();
+        String message = rootMsg != null && rootMsg.toLowerCase().contains("truncat")
+                ? "One of the fields exceeds the maximum allowed length"
+                : "A record with this value already exists";
+        return build(HttpStatus.CONFLICT, message, req);
     }
 
     @ExceptionHandler(BadCredentialsException.class)
